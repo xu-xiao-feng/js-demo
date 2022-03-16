@@ -37,10 +37,45 @@ let isFound = true
 // 表示整数,浮点数
 // Infinity 表示无穷大
 // NaN 表示 不是数值, isNaN 判断
+let num1 = 12
+let num2 = 3.25
+let num3 = 0x12
+let num4 = 0o12
+let num5 = 1.1e3
+let num6 = 1 / 0
+let num7 = 'str' / 1
+console.log(isNaN(num7))
+// 数值转换
+let num8 = Number('')
+let num9 = Number('2')
+let num10 = Number(true)
+let num11 = parseInt('1.1')
+let num12 = parseFloat('0093.5')
 
+// string
+// 表示零或多个16 位 Unicode 字符序列, 可以使用"", '', ``
+// 转义字符 \n 换行, \t 制表, \b 退格, \r 回车, \f 换页
+let str1 = 'john'
+let str2 = 'smish' + str1
+let str3 = num1.toString()
+let str4 = num1.toString(8)//进制转换
+let str5 = `${str1} age ${num1.toString()}`// 模板字符串
 
+// symbol
+// 唯一不可变, 用来确保对象属性使用唯一标识符
+let sym1 = Symbol()
+let sym2 = Symbol()
+console.log('sym', sym1 === sym2)
 
+let sym3 = Symbol('foo')
 
+let obj = {
+  [sym1]: 11,
+  [sym2]: 22,
+  [sym3]: 33
+}
+let symStr = sym1.toString()
+sym1.valueOf()
 
 
 console.log(11)
